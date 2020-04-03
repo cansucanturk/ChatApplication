@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#3d3d3d"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".GirisActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="200dp"
+        android:background="@drawable/chat"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kullanıcı adı giriniz"
+        android:layout_marginTop="50dp"
+        android:textColorHint="#ffcccc"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/kullaniciAdiEditText"
+        />|
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_gravity="center"
+       android:id="@+id/kaydolmaButon"
+       android:background="#ffcccc"
+       android:textStyle="bold"
+       android:layout_height="wrap_content"
+       android:text="GirişYap"
+/>
+</LinearLayout>
