@@ -54,7 +54,7 @@ public class GirisActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "Kayıt başarılı", Toast.LENGTH_LONG).show();
                   Intent intent = new Intent(GirisActivity.this,MainActivity.class);
-                 Intent.putExtra("kullaniciAdi", kullaniciAdi);
+                    intent.putExtra("kullaniciAdi", kullaniciAdi);
                   startActivity(intent);
                 }
             }
