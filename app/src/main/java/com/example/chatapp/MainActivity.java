@@ -3,6 +3,8 @@ package com.example.chatapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference reference;
     List<String> list;
     String userName;
+    RecyclerView userRecyclerView;
+    UserAdapter userAdapter;
 
 
     @Override
@@ -39,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         firebaseDatabase = firebaseDatabase.getInstance();
         reference =firebaseDatabase.getReference();
         list= new ArrayList<>();
+        userRecyclerView = (RecyclerView)findViewById(R.id.userRecyclerView);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(MainActivity.this,2);
+        userRecyclerView.setLayoutManager(layoutManager);
+        userAdapter = new UserAdapter(MainActivity.this, list, MainActivity.this);
+        userRecyclerView.setAdapter(userAdapter);
     }
 
     public void listele(){
